@@ -11,7 +11,7 @@ export const Message = (props) => {
   const messageClass = uid === auth.currentUser.uid ? `${styles.sent}` : `${styles.received}`;
 
   const handleDeleteMessage = async () => {
-    await deleteDoc(doc(db, 'messages', id));
+    await deleteDoc(doc(db, 'staging-messages', id));
   }
 
   return (

@@ -10,7 +10,7 @@ export const Chat = () => {
   const scroll = useRef();
 
   useEffect(() => {
-    const q = query(collection(db, 'messages'), orderBy('createdAt'));
+    const q = query(collection(db, 'staging-messages'), orderBy('createdAt'));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const data = querySnapshot.docs.map((doc) => ({
         ...doc.data(),

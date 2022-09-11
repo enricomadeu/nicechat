@@ -10,7 +10,7 @@ export const SendMessage = ({scroll}) => {
     e.preventDefault();
     if (input === "") return;
     const { uid, displayName } = auth.currentUser;
-    await addDoc(collection(db, 'messages'), {
+    await addDoc(collection(db, 'staging-messages'), {
       text: input,
       name: displayName,
       uid,
