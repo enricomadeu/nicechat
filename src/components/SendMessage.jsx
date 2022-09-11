@@ -26,7 +26,7 @@ export const SendMessage = ({scroll}) => {
   return (
     <form onSubmit={(e) => sendMessage(e)} className={styles.form}>
       <input className={styles.input} value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Message" />
-      <button className={styles.button} type="submit">Send</button>
+      <button className={styles.button} type="submit">Enviar</button>
     </form>
   )
 }

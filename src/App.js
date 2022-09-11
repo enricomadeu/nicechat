@@ -15,7 +15,12 @@ export const App = () => {
         {/* Navbar */}
         <Navbar />
         {/* Chat component */}
-        {user && <Chat />}
+        {user ? 
+        <Chat /> :
+        <div 
+          className={styles.signInMessage}>
+            Faça login para entrar na sala de bate-papo!
+        </div>}
       </section>
     </div>
   );
