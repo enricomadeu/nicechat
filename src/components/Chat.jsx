@@ -20,7 +20,6 @@ export const Chat = () => {
     });
     return () => unsubscribe();
   }, []);
-
   return (
     <>
       <main className={styles.main}>
